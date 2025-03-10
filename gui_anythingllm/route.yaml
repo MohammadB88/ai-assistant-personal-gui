@@ -1,0 +1,18 @@
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: ai-assistant
+  namespace: computacenter
+  labels: {}
+spec:
+  to:
+    kind: Service
+    name: ai-assistant-svc
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+    destinationCACertificate: ''
+  port:
+    targetPort: 8888
+  alternateBackends: []
