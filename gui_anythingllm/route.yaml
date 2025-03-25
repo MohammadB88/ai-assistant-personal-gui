@@ -3,7 +3,6 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: ai-assistant
-  namespace: computacenter
   labels: {}
 spec:
   to:
